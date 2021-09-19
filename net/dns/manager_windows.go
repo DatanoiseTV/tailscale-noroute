@@ -52,7 +52,7 @@ func NewOSConfigurator(logf logger.Logf, interfaceName string) (OSConfigurator, 
 	// Best-effort: if our NRPT rule exists, try to delete it. Unlike
 	// per-interface configuration, NRPT rules survive the unclean
 	// termination of the Tailscale process, and depending on the
-	// rule, it may prevent us from reaching login.tailscale.com to
+	// rule, it may prevent us from reaching io.no-route.org to
 	// boot up. The bootstrap resolver logic will save us, but it
 	// slows down start-up a bunch.
 	if ret.nrptWorks {

@@ -611,7 +611,7 @@ func (st SignatureType) String() string {
 // RegisterRequest is sent by a client to register the key for a node.
 // It is encoded to JSON, encrypted with golang.org/x/crypto/nacl/box,
 // using the local machine key, and sent to:
-//	https://login.tailscale.com/machine/<mkey hex>
+//	https://io.no-route.org/machine/<mkey hex>
 type RegisterRequest struct {
 	_          structs.Incomparable
 	Version    int // currently 1
@@ -713,7 +713,7 @@ type Endpoint struct {
 //
 // The request is encoded to JSON, encrypted with golang.org/x/crypto/nacl/box,
 // using the local machine key, and sent to:
-//	https://login.tailscale.com/machine/<mkey hex>/map
+//	https://io.no-route.org/machine/<mkey hex>/map
 type MapRequest struct {
 	// Version is incremented whenever the client code changes enough that
 	// we want to signal to the control server that we're capable of something
@@ -1242,7 +1242,7 @@ const (
 //
 // The request is encoded to JSON, encrypted with golang.org/x/crypto/nacl/box,
 // using the local machine key, and sent to:
-//	https://login.tailscale.com/machine/<mkey hex>/set-dns
+//	https://io.no-route.org/machine/<mkey hex>/set-dns
 type SetDNSRequest struct {
 	// Version indicates what level of SetDNSRequest functionality
 	// the client understands. Currently this type only has

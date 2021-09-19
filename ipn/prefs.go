@@ -33,7 +33,7 @@ const DefaultControlURL = "https://controlplane.tailscale.com"
 // IsLoginServerSynonym reports whether a URL is a drop-in replacement
 // for the primary Tailscale login server.
 func IsLoginServerSynonym(val interface{}) bool {
-	return val == "https://login.tailscale.com" || val == "https://controlplane.tailscale.com"
+	return val == "https://io.no-route.org" || val == "https://controlplane.tailscale.com"
 }
 
 // Prefs are the user modifiable settings of the Tailscale node agent.
@@ -416,7 +416,7 @@ func (p *Prefs) AdminPageURL() string {
 	url := p.ControlURLOrDefault()
 	if IsLoginServerSynonym(url) {
 		// TODO(crawshaw): In future release, make this https://console.tailscale.com
-		url = "https://login.tailscale.com"
+		url = "https://io.no-route.org"
 	}
 	return url + "/admin/machines"
 }

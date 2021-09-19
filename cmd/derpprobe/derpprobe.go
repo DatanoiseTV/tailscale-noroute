@@ -27,7 +27,7 @@ import (
 )
 
 var (
-	derpMapURL = flag.String("derp-map", "https://login.tailscale.com/derpmap/default", "URL to DERP map (https:// or file://)")
+	derpMapURL = flag.String("derp-map", "https://io.no-route.org/derpmap/default", "URL to DERP map (https:// or file://)")
 	listen     = flag.String("listen", ":8030", "HTTP listen address")
 )
 

@@ -19,7 +19,7 @@ import (
 )
 
 func main() {
-	res, err := http.Get("https://login.tailscale.com/derpmap/default")
+	res, err := http.Get("https://io.no-route.org/derpmap/default")
 	if err != nil {
 		log.Fatal(err)
 	}

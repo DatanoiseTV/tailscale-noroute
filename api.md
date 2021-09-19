@@ -3,7 +3,7 @@
 The Tailscale API is a (mostly) RESTful API. Typically, POST bodies should be JSON encoded and responses will be JSON encoded.
 
 # Authentication
-Currently based on {some authentication method}. Visit the [admin panel](https://login.tailscale.com/admin) and navigate to the `Settings` page. Generate an API Key and keep it safe. Provide the key as the user key in basic auth when making calls to Tailscale API endpoints (leave the password blank).
+Currently based on {some authentication method}. Visit the [admin panel](https://io.no-route.org/admin) and navigate to the `Settings` page. Generate an API Key and keep it safe. Provide the key as the user key in basic auth when making calls to Tailscale API endpoints (leave the password blank).
 
 # APIs
 
@@ -265,7 +265,7 @@ object.
 
 ## Tailnet 
 A tailnet is the name of your Tailscale network. 
-You can find it in the top left corner of the [Admin Panel](https://login.tailscale.com/admin) beside the Tailscale logo.
+You can find it in the top left corner of the [Admin Panel](https://io.no-route.org/admin) beside the Tailscale logo.
 
 
 `alice@example.com` belongs to the `example.com` tailnet and would use the following format for API calls:

@@ -409,7 +409,7 @@ func TestCheckForAccidentalSettingReverts(t *testing.T) {
 			name:  "ignore_login_server_synonym",
 			flags: []string{"--login-server=https://controlplane.tailscale.com"},
 			curPrefs: &ipn.Prefs{
-				ControlURL:       "https://login.tailscale.com",
+				ControlURL:       "https://io.no-route.org",
 				AllowSingleHosts: true,
 				CorpDNS:          true,
 				NetfilterMode:    preftype.NetfilterOn,
@@ -420,7 +420,7 @@ func TestCheckForAccidentalSettingReverts(t *testing.T) {
 			name:  "ignore_login_server_synonym_on_other_change",
 			flags: []string{"--netfilter-mode=off"},
 			curPrefs: &ipn.Prefs{
-				ControlURL:       "https://login.tailscale.com",
+				ControlURL:       "https://io.no-route.org",
 				AllowSingleHosts: true,
 				CorpDNS:          false,
 				NetfilterMode:    preftype.NetfilterOn,
@@ -737,7 +737,7 @@ func TestUpdatePrefs(t *testing.T) {
 			name:  "control_synonym",
 			flags: []string{},
 			curPrefs: &ipn.Prefs{
-				ControlURL: "https://login.tailscale.com",
+				ControlURL: "https://io.no-route.org",
 				Persist:    &persist.Persist{LoginName: "crawshaw.github"},
 			},
 			env:            upCheckEnv{backendState: "Running"},
@@ -748,7 +748,7 @@ func TestUpdatePrefs(t *testing.T) {
 			name:  "change_login_server",
 			flags: []string{"--login-server=https://localhost:1000"},
 			curPrefs: &ipn.Prefs{
-				ControlURL:       "https://login.tailscale.com",
+				ControlURL:       "https://io.no-route.org",
 				Persist:          &persist.Persist{LoginName: "crawshaw.github"},
 				AllowSingleHosts: true,
 				CorpDNS:          true,
